@@ -1,6 +1,7 @@
 import { Header } from './components/Header'
 import { SearchBar } from './components/Search-bar'
-import { Filter } from './components/FIlter'
+import { Filter } from './components/Filter'
+import {CarList} from './components/Car-list'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <SearchBar />
       <Filter />
+      <CarList />
     </>
   )
 }
