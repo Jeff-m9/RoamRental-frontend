@@ -5,6 +5,7 @@ import { CarList } from "./components/Car-list";
 // import "./app.css";
 import { useState, useEffect } from "react";
 import { CarDetails } from "./components/Car-details";
+import {CarDetails} from "../components/Car-details"
 
 function App() {
   const [cars, setcars] = useState([]);
@@ -29,8 +30,11 @@ function App() {
         <SearchBar cars={cars} setFilteredCars={setFilteredCars} />
         <Filter cars={cars} setFilteredCars={setFilteredCars} />
       </div>
-      <CarList handleFetch={handleFetch} cars={filteredCars} />
-      {/* <CarDetails cars={cars} /> */}
+          <CarList handleFetch={handleFetch} cars={filteredCars} />
+          
+      {cars.map((car, index) => (
+        <CarDetails key={index} {...car} />
+      ))}
     </>
   );
 }
