@@ -1,6 +1,6 @@
 export function CarList({ handleFetch, cars }) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-20 p-20">
       {cars.map((car) => (
         <div
           key={car.id}

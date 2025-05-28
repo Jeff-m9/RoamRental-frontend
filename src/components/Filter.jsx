@@ -1,13 +1,30 @@
-export function Filter() {
+import { useState, useEffect } from "react";
+
+export function Filter({cars, setFilteredCars}) {
+  const [filter, setFilter] = useState("");
+
+  const categories = [...new Set(cars.map((car) => car.category))];
+
+  useEffect(() => {
+    const filteredCars = cars.filter(
+      (car) => !filter || car.category === filter
+    );
+    setFilteredCars(filteredCars);
+  }, [filter, cars, setFilteredCars]);
+
   return (
     <div className="flex justify-center mt-6">
       <select
-        name="Categories"
-        className="bg-blue-500 text-white font-medium rounded-lg px-4 w-40 h-12 shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
+        value={filter}
+        onChange={(e) => setFilter(e.target.value)}
+        className="bg-gray-300 font-medium rounded-lg px-4 w-40 h-12 shadow-md hover:bg-blue-700 "
       >
         <option value="">Category</option>
-        <option value="SUV">SUV</option>
-        <option value="sedan">Sedan</option>
+        {categories.map((category) => (
+          <option key={category} value={category}>
+            {category}
+          </option>
+        ))}
       </select>
     </div>
   );

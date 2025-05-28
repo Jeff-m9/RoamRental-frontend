@@ -8,6 +8,7 @@ import { CarDetails } from "./components/Car-details";
 
 function App() {
   const [cars, setcars] = useState([]);
+  const [filteredCars, setFilteredCars] = useState([]);
 
   const handleFetch = () => {
     fetch("http://localhost:8000/cars")
@@ -24,11 +25,11 @@ function App() {
   return (
     <>
       <Header />
-      <div className="flex pr-10 py-3 pt-10">
-        <SearchBar />
-        <Filter />
+      <div className="flex pr-10 py-3 pt-10 mt-20">
+        <SearchBar cars={cars} setFilteredCars={setFilteredCars} />
+        <Filter cars={cars} setFilteredCars={setFilteredCars} />
       </div>
-      <CarList handleFetch={handleFetch} cars={cars} />
+      <CarList handleFetch={handleFetch} cars={filteredCars} />
       {/* <CarDetails cars={cars} /> */}
     </>
   );
