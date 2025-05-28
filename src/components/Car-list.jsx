@@ -1,15 +1,25 @@
-export function CarList() {
+export function CarList({ handleFetch, cars }) {
   return (
-    <div>
-      <div>
-        <img
-          src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?cs=srgb&dl=pexels-mikebirdy-170811.jpg&fm=jpg"
-          alt=""
-        />
-      </div>
-      <p>category of car</p>
-      <h2>name of car</h2>
-      <p>price of car</p>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+      {cars.map((car) => (
+        <div
+          key={car.id}
+          className="bg-white shadow-md rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition duration-300"
+        >
+          <img
+            src={car.image}
+            alt={car.name}
+            className="w-full h-48 object-cover"
+          />
+          <div className="p-4">
+            <p className="text-sm text-gray-500">{car.category}</p>
+            <h1 className="text-lg font-semibold">{car.name}</h1>
+            <p className="text-blue-600 font-bold">
+              KES {car.price_per_day} / day
+            </p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
