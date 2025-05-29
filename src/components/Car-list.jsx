@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export function CarList({ cars }) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-20 p-20">
+    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20 p-20">
       {cars.map((car) => (
         <div
           key={car.id}
@@ -12,7 +12,7 @@ export function CarList({ cars }) {
             <img
               src={car.image}
               alt={car.name}
-              className="w-full h-48 object-cover"
+              className="w-full h-80 object-cover"
             />
             <div className="p-4">
               <p className="text-sm text-gray-500">{car.category}</p>

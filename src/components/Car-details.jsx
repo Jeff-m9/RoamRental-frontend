@@ -7,30 +7,44 @@ export function CarDetails({
   category,
   price_per_day,
   availability_status,
-})
-
-{
+}) {
   return (
-      <div className="p-6 flex justify-between items-center">
-        <div className="bg-white rounded-xl shadow-md overflow-hidden border hover:shadow-lg transition-shadow">
-          <img src={image} alt={name} className="w-full h-48 object-cover" />
-          <div className="p-4 space-y-2">
-            <h2 className="text-xl font-semibold text-gray-800">{name}</h2>
-            <p className="text-gray-600">
-              <strong>Seats:</strong> {seats}
-            </p>
-            <p className="text-gray-600">
-              <strong>Luggage :</strong> {luggage}
-            </p>
-            <p className="text-gray-600">
-              <strong>Category:</strong> {category}
-            </p>
-            <p className="text-gray-800 font-medium">
-              <strong>Price:</strong> KES {price_per_day} / day
-            </p>
-            <p className="font-semibold">{availability_status}</p>
-          </div>
+    <div className="p-6 flex gap-20 mt-20">
+      <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+        <img src={image} alt={name} className="w-full h-200 object-cover" />
+      </div>
+      <div className="p-6 space-y-6 bg-white rounded-lg shadow-sm w-120 h-120 text-center hover:shadow-2xl">
+        <h2 className="text-5xl font-bold text-gray-800 border-b pb-4">
+          {name}
+        </h2>
+
+        <div className="text-2xl text-gray-700 space-y-2">
+          <p>
+            <span className="font-semibold text-gray-900">Seats:</span> {seats}
+          </p>
+          <p>
+            <span className="font-semibold text-gray-900">Luggage:</span>{" "}
+            {luggage}
+          </p>
+          <p>
+            <span className="font-semibold text-gray-900">Category:</span>{" "}
+            {category}
+          </p>
+          <p>
+            <span className="font-semibold text-gray-900">Price:</span> KES{" "}
+            {price_per_day} / day
+          </p>
+          <p
+            className={`font-bold ${
+              availability_status === "available"
+                ? "text-green-600"
+                : "text-red-500"
+            }`}
+          >
+            {availability_status}
+          </p>
         </div>
       </div>
+    </div>
   );
 }
