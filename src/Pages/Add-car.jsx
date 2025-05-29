@@ -17,7 +17,7 @@ const validationSchema = z.object({
   image: z.string().url({ message: "Image url is required" }),
   availability_status: z
     .string()
-    .nonempty({ message: "Availability status name is required" }),
+    .nonempty({ message: "Availability status is required" }),
 });
 
 export function AddCar() {
@@ -178,7 +178,7 @@ export function AddCar() {
 
           <button
             type="submit"
-            className="bg-gray-300 font-medium rounded-lg px-4 w-40 h-12 shadow-md hover:bg-blue-700 mt-10"
+            className="bg-gray-300 font-medium rounded-lg px-4 w-40 h-12 shadow-md hover:bg-blue-700 mt-10 text-2xl"
           >
             Submit
           </button>

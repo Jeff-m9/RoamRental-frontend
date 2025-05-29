@@ -8,6 +8,7 @@ import { ContactUs } from "./Pages/Contact-Us.jsx";
 import { CarDetailsPage } from "./Pages/Car-Details-Page.jsx";
 import { AddCar } from "./Pages/Add-car.jsx";
 import { Toaster } from "react-hot-toast";
+import { UserRegistration } from "./Pages/User-registration.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const routes = createBrowserRouter([
     element: <AddCar />,
   },
   {
+    path: "/user-registration",
+    element: <UserRegistration/>
+  },
+  {
     path: "/contact-us",
     element: <ContactUs />,
   },
@@ -31,7 +36,7 @@ const routes = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     {/* <App /> */}
-    <Toaster position="bottom-right" />
+    <Toaster />
     <RouterProvider router={routes} />
   </StrictMode>
 );

@@ -10,6 +10,12 @@ export function Header() {
             Home
           </Link>
           <Link
+            to={"/user-registration"}
+            className="text-gray-100 hover:text-blue-500 text-2xl"
+          >
+            Register
+          </Link>
+          <Link
             to={"/add-car"}
             className="text-gray-100 hover:text-blue-500 text-2xl"
           >
