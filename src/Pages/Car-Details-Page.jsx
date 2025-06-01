@@ -12,7 +12,6 @@ export function CarDetailsPage() {
     fetch(`http://localhost:8000/cars/${params.carId}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setCar(data);
       });
   }, [params.carId]);

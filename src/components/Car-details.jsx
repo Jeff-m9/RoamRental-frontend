@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function CarDetails({
   id,
   name,
@@ -47,9 +49,9 @@ export function CarDetails({
             </p>
           </div>
 
-          <button className="bg-blue-600 text-white px-4 py-2 rounded">
+          <Link to={"/bookings"} className="bg-blue-600 text-white px-4 py-2 rounded">
             Book Now
-          </button>
+          </Link>
         </div>
       </div>
     </div>

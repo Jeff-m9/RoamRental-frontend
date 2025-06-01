@@ -9,6 +9,7 @@ import { CarDetailsPage } from "./Pages/Car-Details-Page.jsx";
 import { AddCar } from "./Pages/Add-car.jsx";
 import { Toaster } from "react-hot-toast";
 import { UserRegistration } from "./Pages/User-registration.jsx";
+import { BookingsPage } from "./Pages/Booking.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const routes = createBrowserRouter([
   {
     path: "/user-registration",
     element: <UserRegistration/>
+  },
+  {
+    path: "/bookings",
+    element: <BookingsPage />
   },
   {
     path: "/contact-us",
