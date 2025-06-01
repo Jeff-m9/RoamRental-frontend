@@ -10,6 +10,7 @@ import { AddCar } from "./Pages/Add-car.jsx";
 import { Toaster } from "react-hot-toast";
 import { UserRegistration } from "./Pages/User-registration.jsx";
 import { BookingsPage } from "./Pages/Booking.jsx";
+import { ViewBookings } from "./Pages/View-bookings.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const routes = createBrowserRouter([
   {
     path: "/bookings",
     element: <BookingsPage />
+  },
+  {
+    path: "/view-bookings",
+    element: <ViewBookings />
   },
   {
     path: "/contact-us",

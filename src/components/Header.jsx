@@ -22,6 +22,12 @@ export function Header() {
             Add Car
           </Link>
           <Link
+            to={"/view-bookings"}
+            className="text-gray-100 hover:text-blue-500 text-2xl"
+          >
+            View Bookings
+          </Link>
+          <Link
             to="/contact-us"
             className="text-gray-100 hover:text-blue-500 text-2xl"
           >
