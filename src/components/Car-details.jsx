@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 export function CarDetails({
   id,
@@ -10,6 +12,18 @@ export function CarDetails({
   price_per_day,
   availability_status,
 }) {
+  const navigate = useNavigate();
+
+  const handleDelete = () => {
+    fetch(`http://localhost:8000/cars/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        toast.success(data.message);
+        navigate("/");
+      });
+  };
   return (
     <div className="p-6 flex gap-20 mt-20">
       <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow w-270">
@@ -49,10 +63,19 @@ export function CarDetails({
             </p>
           </div>
 
-          <Link to={"/bookings"} className="bg-blue-600 text-white px-4 py-2 rounded">
+          <Link
+            to={"/bookings"}
+            className="bg-blue-600 text-white px-4 py-2 rounded"
+          >
             Book Now
           </Link>
         </div>
+        <button
+          className="bg-red-600 text-white px-4 py-2 rounded"
+          onClick={handleDelete}
+        >
+          Delete
+        </button>
       </div>
     </div>
   );

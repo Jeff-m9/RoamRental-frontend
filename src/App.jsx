@@ -33,7 +33,7 @@ function App() {
           <CarList handleFetch={handleFetch} cars={filteredCars} />
           
       {cars.map((car, index) => (
-        <CarDetails key={index} {...car} />
+        <CarDetails key={index} {...car} handleFetch={handleFetch}/>
       ))}
     </>
   );

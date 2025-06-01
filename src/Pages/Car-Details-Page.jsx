@@ -8,7 +8,6 @@ export function CarDetailsPage() {
   const [car, setCar] = useState(null);
 
   useEffect(() => {
-    console.log("Fetching car with ID:", params.carId);
     fetch(`http://localhost:8000/cars/${params.carId}`)
       .then((res) => res.json())
       .then((data) => {
