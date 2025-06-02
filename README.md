@@ -1,12 +1,88 @@
-# React + Vite
+# RoamRental — Car Rental Service App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+RoamRental is a web application that allows users to browse available cars, register, and make car bookings. Users can also view and cancel their bookings using their email address.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- View a list of available cars
+- Register new users
+- Book a car for a number of days
+- Retrieve bookings by email
+- Cancel existing bookings
+- Built with FastAPI (backend) and React (frontend)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Tech Stack
+
+### Backend (API)
+- **Python**
+- **FastAPI**
+- **SQLAlchemy (ORM)**
+- **SQLite** (can be swapped with PostgreSQL or others)
+- **Uvicorn** (for local dev server)
+
+### Frontend
+- **React**
+- **Vite**
+- **Tailwind CSS**
+- **React Hook Form** + **Zod** (form validation)
+- **React Hot Toast** (notifications)
+
+---
+
+## Setup Instructions
+
+### Prerequisites
+- Python 3.10+
+- Node.js & npm
+- SQLite (or any SQL DB of choice)
+
+---
+
+### Backend Setup
+
+1. **Navigate to backend folder:**
+   cd backend
+
+2. **Install dependancies:**
+   pipenv install fastapi sqlalchemy alembic
+
+3. **Run the server**
+   fastapi run dev
+
+### Frontend Setup
+
+1. **Navigate to backend folder:**
+   cd backend
+
+2. **Install dependancies:**
+   npm install
+
+3. **Run the server**
+   npm run dev
+
+---
+
+## Usage Instructions
+
+1. Register as a user by selecting the register option and filling in your details.
+
+2. View available cars from the /cars endpoint.
+
+3. Make a booking by selecting a car, clicking on the book now button, filling the form and submitting.
+
+4. Check your bookings by entering your email on the "View Bookings" page.
+
+5. Cancel a booking by clicking the cancel button next to your listed bookings.
+
+
+## Live Site
+
+Check out the live version: [RoamRental App](https://jeff-m9.github.io/MovieWorld-App-Project/)
+
+## Copyright
+
+&copy; 2025 RoamRental App. All rights reserved.
