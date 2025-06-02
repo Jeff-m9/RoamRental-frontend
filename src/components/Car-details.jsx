@@ -15,7 +15,7 @@ export function CarDetails({
   const navigate = useNavigate();
 
   const handleDelete = () => {
-    fetch(`http://localhost:8000/cars/${id}`, {
+    fetch(`https://roamrental-backend.onrender.com/cars/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

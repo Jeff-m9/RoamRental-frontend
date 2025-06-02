@@ -12,7 +12,7 @@ function App() {
   const [filteredCars, setFilteredCars] = useState([]);
 
   const handleFetch = () => {
-    fetch("http://localhost:8000/cars")
+    fetch("https://roamrental-backend.onrender.com/cars")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

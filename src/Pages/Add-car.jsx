@@ -26,7 +26,7 @@ export function AddCar() {
   const status = [...new Set(cars.map((car) => car.availability_status))];
 
   useEffect(() => {
-    fetch("http://localhost:8000/cars")
+    fetch("https://roamrental-backend.onrender.com/cars")
       .then((res) => res.json())
       .then((data) => setCars(data));
   }, []);

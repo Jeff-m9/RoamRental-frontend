@@ -8,7 +8,7 @@ export function CarDetailsPage() {
   const [car, setCar] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/cars/${params.carId}`)
+    fetch(`https://roamrental-backend.onrender.com/cars/${params.carId}`)
       .then((res) => res.json())
       .then((data) => {
         setCar(data);

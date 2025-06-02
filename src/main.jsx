@@ -4,7 +4,6 @@ import "./index.css";
 // import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HomePage } from "./Pages/Home.jsx";
-import { ContactUs } from "./Pages/Contact-Us.jsx";
 import { CarDetailsPage } from "./Pages/Car-Details-Page.jsx";
 import { AddCar } from "./Pages/Add-car.jsx";
 import { Toaster } from "react-hot-toast";
@@ -36,11 +35,7 @@ const routes = createBrowserRouter([
   {
     path: "/view-bookings",
     element: <ViewBookings />
-  },
-  {
-    path: "/contact-us",
-    element: <ContactUs />,
-  },
+  }
 ]);
 
 createRoot(document.getElementById("root")).render(

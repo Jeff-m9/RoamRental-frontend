@@ -28,7 +28,7 @@ export function UserRegistration() {
   });
 
   const onSubmit = (values) => {
-    fetch("http://localhost:8000/users", {
+    fetch("https://roamrental-backend.onrender.com/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

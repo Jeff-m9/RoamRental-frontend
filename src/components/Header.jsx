@@ -27,12 +27,6 @@ export function Header() {
           >
             View Bookings
           </Link>
-          <Link
-            to="/contact-us"
-            className="text-gray-100 hover:text-blue-500 text-2xl"
-          >
-            Contact Us
-          </Link>
         </div>
       </div>
     </header>

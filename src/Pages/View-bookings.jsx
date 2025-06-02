@@ -28,7 +28,7 @@ export function ViewBookings() {
 
   const fetchBookings = () => {
     fetch(
-      `http://localhost:8000/bookings/by-email?email=${encodeURIComponent(
+      `https://roamrental-backend.onrender.com/bookings/by-email?email=${encodeURIComponent(
         email
       )}`
     )
@@ -37,7 +37,7 @@ export function ViewBookings() {
   };
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:8000/bookings/${id}`, {
+    fetch(`https://roamrental-backend.onrender.com/bookings/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

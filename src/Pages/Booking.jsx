@@ -30,12 +30,14 @@ export function BookingsPage() {
   });
 
   const carName = watch("car_name");
-  const numOfDays = watch("num_of_days");
-  const totalPrice = numOfDays * pricePerDay;
 
   useEffect(() => {
     if (carName.trim()) {
-      fetch(`http://localhost:8000/cars/by-name/${encodeURIComponent(carName)}`)
+      fetch(
+        `https://roamrental-backend.onrender.com/cars/by-name/${encodeURIComponent(
+          carName
+        )}`
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.price_per_day) {
