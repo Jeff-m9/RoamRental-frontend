@@ -81,7 +81,7 @@ RoamRental is a web application that allows users to browse available cars, regi
 
 ## Live Site
 
-Check out the live version: [RoamRental App](https://jeff-m9.github.io/MovieWorld-App-Project/)
+Check out the live version: [RoamRental App](https://roam-rental-frontend.vercel.app)
 
 ## Copyright
 
