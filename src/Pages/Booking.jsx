@@ -50,7 +50,7 @@ export function BookingsPage() {
   }, [carName]);
 
   const onSubmit = (values) => {
-    fetch("http://localhost:8000/bookings", {
+    fetch("https://roamrental-backend.onrender.com/bookings", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
