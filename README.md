@@ -1,5 +1,10 @@
 # RoamRental — Car Rental Service App
 
+## Author
+
+Jeff Mbithi
+
+## Description
 RoamRental is a web application that allows users to browse available cars, register, and make car bookings. Users can also view and cancel their bookings using their email address.
 
 ---
@@ -15,30 +20,14 @@ RoamRental is a web application that allows users to browse available cars, regi
 
 ---
 
-## Tech Stack
-
-### Backend (API)
-- **Python**
-- **FastAPI**
-- **SQLAlchemy (ORM)**
-- **SQLite** (can be swapped with PostgreSQL or others)
-- **Uvicorn** (for local dev server)
-
-### Frontend
-- **React**
-- **Vite**
-- **Tailwind CSS**
-- **React Hook Form** + **Zod** (form validation)
-- **React Hot Toast** (notifications)
-
----
-
 ## Setup Instructions
+
+- Fork and clone the repository `https://github.com/Jeff-m9/RoamRental`
 
 ### Prerequisites
 - Python 3.10+
 - Node.js & npm
-- SQLite (or any SQL DB of choice)
+- SQLite
 
 ---
 
@@ -66,6 +55,24 @@ RoamRental is a web application that allows users to browse available cars, regi
 
 ---
 
+## Tech Stack
+
+### Backend (API)
+- **Python**
+- **FastAPI**
+- **SQLAlchemy (ORM)**
+- **SQLite** 
+- **Uvicorn** 
+
+### Frontend
+- **React**
+- **Vite**
+- **Tailwind CSS**
+- **React Hook Form** + **Zod** 
+- **React Hot Toast** 
+
+---
+
 ## Usage Instructions
 
 1. Register as a user by selecting the register option and filling in your details.
@@ -86,3 +93,7 @@ Check out the live version: [RoamRental App](https://roam-rental-frontend.vercel
 ## Copyright
 
 &copy; 2025 RoamRental App. All rights reserved.
+
+## License
+
+This project is licensed under the [MIT License](./License).
