@@ -51,7 +51,7 @@ export function AddCar() {
   });
 
   const onSubmit = (values) => {
-    fetch("http://localhost:8000/cars", {
+    fetch("https://roamrental-backend.onrender.com/cars", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
