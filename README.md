@@ -90,6 +90,10 @@ RoamRental is a web application that allows users to browse available cars, regi
 
 Check out the live version: [RoamRental App](https://roam-rental-frontend.vercel.app)
 
+## Demonstration video
+
+Here is the video illustrating how to use the app: [RoamRental App Video](https://www.loom.com/share/1aedff42948646e897b06ae006d87018?sid=f9420d3e-7100-43d3-9fb7-cb26cd1d2664)
+
 ## Copyright
 
 &copy; 2025 RoamRental App. All rights reserved.
